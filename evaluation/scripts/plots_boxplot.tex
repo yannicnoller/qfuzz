@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepgfplotslibrary{statistics}
+\usepackage{xspace} % to get the spacing after macros right
+\begin{document}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\begin{tikzpicture}
+  \begin{axis} [
+        title={Time Comparison (n=4779 files)},
+        height=4.0cm, width=9.0cm,
+        xmajorgrids=true,
+        xmin=0, xmax=7300, xtick={0,1000,2000,...,7300},
+        ytick={1,2},
+        yticklabels={Greedy, KDynamic},
+        legend style={at={(0.5,-0.2)}, anchor=north, legend columns=-1},
+        ymin=0,ymax=3,
+        xlabel= {computation time (nanosec)},
+        /pgfplots/boxplot/box extend=0.3
+    ]
+    \addplot+ [ % Greedy
+    color=blue,
+    boxplot prepared={
+      median=1053.0,
+      upper quartile=1727.0,
+      lower quartile=728.0,
+      upper whisker=3225.0,
+      lower whisker=397.0,
+      draw position=1
+    },
+    ] coordinates {};
+    \addplot+ [ % KDynamic
+    color=darkgreen,
+    boxplot prepared={
+      median=2704.0,
+      upper quartile=4080.0,
+      lower quartile=2110.0,
+      upper whisker=7021.0,
+      lower whisker=1263.00,
+      draw position=2
+    },
+    ] coordinates {};
+  \end{axis}
+\end{tikzpicture}
+\end{document}

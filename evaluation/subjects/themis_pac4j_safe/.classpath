@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/h2-1.4.197.jar"/>
+	<classpathentry kind="lib" path="lib/jdbi-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/pac4j-core-1.9.9.jar"/>
+	<classpathentry kind="lib" path="lib/pac4j-sql-1.9.9.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.14.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.25.jar"/>
+	<classpathentry kind="src" path="/instrumentor"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

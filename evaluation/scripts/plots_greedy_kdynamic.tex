@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{tikz}
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\usepackage{xspace} % to get the spacing after macros right
+
+\newcommand{\tool}[1]{\textsc{#1}\xspace}
+\newcommand{\hydiff}{\tool{HyDiff}}
+\newcommand*{\plotscale}{0.8}
+\newcommand{\errorband}[5][]{ % x column, y column, error column, optional argument for setting style of the area plot
+\pgfplotstableread[col sep=comma]{#2}\datatable
+    % Lower bound (invisible plot)
+    \addplot [draw=none, stack plots=y, forget plot] table [
+        x={#3},
+        y expr=\thisrow{#4}-\thisrow{#5},
+    ] {\datatable};
+
+    % Stack twice the error, draw as area plot
+    \addplot [draw=none, fill=gray!40, stack plots=y, area legend, #1] table [
+        x={#3},
+        y expr=2*\thisrow{#5}
+    ] {\datatable} \closedcycle;
+
+    % Reset stack using invisible plot
+    \addplot [forget plot, stack plots=y,draw=none] table [x={#3}, y expr=-(\thisrow{#4}+\thisrow{#5})] {\datatable};
+}
+
+
+
+
+\begin{document}
+
+%%% ADD HERE THE .tex FILE
+\input{_plot_Eclipse_jetty_1_eps1_t=1800_partitions.tex}
+
+\end{document}

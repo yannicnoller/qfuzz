@@ -1,0 +1,11 @@
+/bin/
+/bin-instr*
+/cfg/
+/fuzzer-out*
+/hydiff-out*
+/parfuzz-*
+/symexe-out*
+/symcov-out*
+*.dot
+*.pdf
+*.csv

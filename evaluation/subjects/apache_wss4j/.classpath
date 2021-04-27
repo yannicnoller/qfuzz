@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/wss4j-1.6.19.jar"/>
+	<classpathentry kind="lib" path="lib/wss4j-bindings-2.3.0.jar"/>
+	<classpathentry kind="src" path="/instrumentor"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
