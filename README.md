@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/204430941.svg)](https://zenodo.org/badge/latestdoi/204430941)
+
 # QFuzz: Quantitative Fuzzing for Side Channels
 This repository provides the tool and the evaluation subjects for the paper "QFuzz: Quantitative Fuzzing for Side Channels" accepted for the technical track at [ISSTA'2021](https://conf.researchr.org/home/issta-2021).
 A pre-print of the paper is available [here](https://yannicnoller.github.io/publications/issta2021_noller_qfuzz.pdf).
