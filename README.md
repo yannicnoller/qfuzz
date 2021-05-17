@@ -66,7 +66,7 @@ Note that depending on your execution environment, you may want to modify this s
 We tested our scripts on a Ubuntu Ubuntu 18.04.1 LTS machine.
 
 ```
-cd evaluation/tool
+cd tool
 ./setup.sh
 ```
 
